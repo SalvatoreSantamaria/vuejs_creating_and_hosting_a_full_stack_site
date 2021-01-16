@@ -1,10 +1,30 @@
 <template>
-  <h1>This is the product page</h1>
+<div id="page-wrap">
+  <h1>This is the {{ title }}</h1>
+  <div class="grid-wrap">
+    <div class="product-item" v-for="product in products" v-bind:key="product.id">
+      <img v-bind-src="product.imageUrl" alt="">
+      <h3 class="product-name"> {{ product.name }} </h3>
+      <p class="product-price">${{ product.price }}</p>
+      <router-link v-bind:to="'/products/' + product.id">
+        <button>View Details</button>
+      </router-link>
+    </div>
+  </div>
+</div>
+
 </template>
 
 <script>
+import { products } from '../fake-data'
   export default {
-    name: 'ProductsPage'
+    name: 'ProductsPage',
+    data() {
+      return {
+        title: "Product Page",
+        products
+      };
+    }
   };
 </script>
 
