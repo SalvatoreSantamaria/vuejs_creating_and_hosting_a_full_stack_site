@@ -45,3 +45,16 @@ All components have a template, script, and style
 <template></template>
 <script></script>
 <style></style>
+
+## Routing Basics
+Add View Router with CLI
+`vue add router`
+This will add the router and views folders with files
+Under router/index.js, create routes like this: 
+```
+  {
+    path: '/products',
+    name: 'Products',
+    component: ProductsPage
+  },
+```
