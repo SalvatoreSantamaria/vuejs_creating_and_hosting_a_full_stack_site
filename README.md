@@ -50,6 +50,9 @@ All components have a template, script, and style
 Add View Router with CLI
 `vue add router`
 This will add the router and views folders with files
+
+*TO BE COMPETED!
+
 Under router/index.js, create routes like this: 
 ```
   {
